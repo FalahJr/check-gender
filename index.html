@@ -2,19 +2,40 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
-    <div class="bg-gray-300 w-screen h-screen flex justify-center items-center">
-      <div class="flex flex-col w-1/4 gap-2">
-        <label for="nama" class="text-sm">Masukkan Nama Kamu</label>
-        <input
-          type="text"
-          placeholder="Contoh : Mifta Falah"
-          class="rounded-2xl p-2"
-        />
+    <div class="w-screen max-h-screen">
+      <div class="bg-gray-300 h-[100vh]">
+        <h1 class="text-center py-24 text-4xl">Tebak Jenis Kelamin</h1>
+
+        <div class="py-14 flex justify-center">
+          <div class="flex flex-col md:w-2/4 w-3/4 md:gap-2">
+            <label for="nama" class="text-sm">Masukkan Nama Kamu</label>
+            <input
+              type="text"
+              placeholder="Contoh : Mifta Falah"
+              class="rounded-xl p-2 mt-2 md:mt-0"
+              id="inputName"
+            />
+            <button
+              onclick="predict()"
+              class="bg-green-500 py-2 px-4 w-full mt-4 md:mt-0 rounded-full text-white"
+              type="submit"
+            >
+              Kirim
+            </button>
+          </div>
+        </div>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
