@@ -24,6 +24,12 @@ async function predict() {
     return;
   }
 
+  if (/\s/.test(firstName)) {
+    // Mengecek apakah terdapat spasi dalam nama
+    Swal.fire("Mohon masukkan hanya satu kata tanpa spasi.");
+    return;
+  }
+
   const url = `${base_api}/?name=${firstName}&country_id=ID`;
 
   try {
